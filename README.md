@@ -7,99 +7,114 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-Windows-blue?style=for-the-badge&logo=windows" alt="Platform">
   <img src="https://img.shields.io/badge/Python-3.8+-yellow?style=for-the-badge&logo=python" alt="Python">
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge&logo=opensourceinitiative" alt="License">
+  <img src="https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge" alt="License">
+  <a href="https://xiaozhang2.gumroad.com/l/win-visual-uninstaller"><img src="https://img.shields.io/badge/Get%20it%20on-Gumroad-orange?style=for-the-badge&logo=gumroad" alt="Gumroad"></a>
 </p>
+
+<div align="center">
+  <h3>🚀 Get the Pro version for just $2.90!</h3>
+  <p>Support the development and get the latest pre-compiled, easy-to-use executable.</p>
+  <a href="https://xiaozhang2.gumroad.com/l/win-visual-uninstaller" target="_blank">
+    <img src="https://img.shields.io/badge/BUY%20NOW%20-%20$2.90-blue?style=for-the-badge&logo=gumroad&logoColor=white" alt="Buy Now">
+  </a>
+</div>
 
 ---
 
-**WinXKill** 是一款受 Linux `xkill` 启发的 Windows 可视化卸载工具。看不惯哪个窗口？只需“点它”，本工具就能自动识别程序信息，并启动官方卸载程序或进行“暴力”强力清除。
+**WinXKill** is a visual uninstaller for Windows inspired by Linux's `xkill`. Don't like a window? Just "point and click." The tool automatically identifies the program information and launches the official uninstaller or performs a "force delete" for stubborn software.
 
-## 🛠️ 工作流程
+## 🛠️ Workflow
 
 ```mermaid
 graph TD
-    A[启动 WinXKill] --> B[点击抓取目标窗口]
-    B --> C[WinXKill 最小化]
-    C --> D[鼠标点击目标软件窗口]
-    D --> E[WinXKill 恢复并读取 HWND/PID]
-    E --> F{查询注册表}
-    F -->|找到卸载命令| G[启动官方卸载向导]
-    F -->|未找到命令| H[进入暴力清除模式]
-    H --> I[强制结束进程]
-    I --> J[删除安装目录]
+    A[Launch WinXKill] --> B[Click Pick Target Window]
+    B --> C[WinXKill Minimizes]
+    C --> D[Click on Target Window]
+    D --> E[WinXKill Restores & Reads HWND/PID]
+    E --> F{Search Registry}
+    F -->|Found Command| G[Launch Official Uninstaller]
+    F -->|No Command Found| H[Enter Force Delete Mode]
+    H --> I[Terminate Process]
+    I --> J[Delete Install Directory]
 ```
 
-## ✨ 核心特性
+## ✨ Key Features
 
-- **🎯 准星级交互**：点击“抓取”按钮，鼠标所指即是目标。
-- **🔍 智能识别**：自动通过进程 ID 反查安装目录及注册表卸载命令。
-- **🛡️ 安全防护**：内置系统关键进程（如 `explorer.exe`）保护机制，防止误操作。
-- **⚡ 两种模式**：
-  - **优雅模式**：优先调用软件自带的官方卸载流程。
-  - **暴力模式**：针对流氓软件或残留文件，强制结束进程并物理删除目录。
+- **🎯 Crosshair Interaction**: Click the "Pick" button and whatever you click is your target.
+- **🔍 Smart Recognition**: Automatically finds the installation path and registry uninstall commands using the Process ID.
+- **🛡️ Security Guard**: Built-in protection for critical system processes (e.g., `explorer.exe`) to prevent accidental damage.
+- **⚡ Dual Modes**:
+  - **Graceful Mode**: Prioritizes the software's official uninstaller if available.
+  - **Force Mode**: For bloatware or leftover files, it terminates the process and physically deletes the directory.
 
-## 📺 使用演示
+## 📺 Demo
 
-> 如下为实机操作演示，展示了如何通过点击窗口快速进入卸载流程。
+> Here is a demonstration of how to quickly enter the uninstallation process by clicking on a window.
 
 <p align="center">
   <video src="video/ev_20260315_142310.mp4" width="800" controls>
-    您的浏览器不支持视频展示，请直接查看 video 文件夹下的视频文件。
+    Your browser does not support the video tag. Please view the video in the video folder.
   </video>
 </p>
 
-*（注：如果 GitHub 无法直接播放视频，请点击 [此处](./video/ev_20260315_142310.mp4) 查看源码）*
+*(Note: If GitHub does not play the video directly, click [here](./video/ev_20260315_142310.mp4) to view the source file.)*
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-### 环境依赖
-本工具需要 Python 环境及以下库：
-- `tk` (通常 Python 自带)
+### Prerequisites
+This tool requires Python and the following libraries:
+- `tk` (usually included with Python)
 - `pywin32`
 - `psutil`
 
-### 安装
+### Installation
 ```bash
-# 克隆仓库
+# Clone the repository
 git clone https://github.com/your-username/rubbishbin.git
 cd rubbishbin
 
-# 安装依赖
+# Install dependencies
 pip install pywin32 psutil
 ```
 
-### 运行
-请务必以 **管理员身份** 运行，否则将无法读取其它程序的安装信息或结束进程：
+### Usage
+Make sure to run the script as an **Administrator**, otherwise, it won't be able to read registry info or terminate other processes:
 ```bash
 python main.py
 ```
 
-### 📦 打包为 EXE
-如果你想直接分发可执行文件给其他人，可以使用 `PyInstaller` 进行打包：
+### 📦 Packaging as EXE
+If you want to distribute a standalone executable, you can use `PyInstaller`:
 
-1. **安装打包依赖**：
+1. **Add packaging dependency**:
    ```bash
    uv add pyinstaller
    ```
 
-2. **执行打包命令**：
+2. **Run build command**:
    ```bash
    uv run pyinstaller --onefile --noconsole --uac-admin --name WinXKill main.py
    ```
-   - `--onefile`: 生成单个独立的 EXE 文件。
-   - `--noconsole`: 运行时不显示黑色命令行窗口。
-   - `--uac-admin`: 自动请求管理员权限（图标上会出现盾牌）。
+   - `--onefile`: Generates a single standalone EXE file.
+   - `--noconsole`: Hides the command console when running.
+   - `--uac-admin`: Automatically requests Admin privileges (adds a shield icon).
 
-打包完成后，生成的 `WinXKill.exe` 将位于 `dist/` 文件夹内。
+The generated `WinXKill.exe` will be located in the `dist/` folder.
 
-## 🛠️ 技术栈
+## 🛠️ Tech Stack
 - **GUI**: Tkinter
 - **OS Interaction**: Windows API (win32gui, win32process, win32api)
 - **Registry**: Software info extraction via `winreg`
 - **Process Mgmt**: `psutil`
 
-## ⚠️ 免责声明
-本工具包含“强力删除”功能，使用前请务必确认目标正确。对于因误操作导致的数据丢失，作者概不负责。建议在执行“暴力模式”前仔细阅读弹出的确认对话框。
+## 💰 Support & License
+WinXKill is a paid product. You can purchase the officially supported and pre-compiled version on [Gumroad](https://xiaozhang2.gumroad.com/l/win-visual-uninstaller) for **$2.90**.
+
+- Your support helps keep this project updated!
+- For full license details, please see the [LICENSE](./LICENSE) file.
+
+## ⚠️ Disclaimer
+This tool includes a "Force Delete" feature. Use it with caution and ensure your target is correct. The author is not responsible for any data loss caused by misuse.
 
 ---
 <p align="center">Made with ❤️ for a cleaner Windows.</p>
