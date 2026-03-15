@@ -1,0 +1,12 @@
+[project]
+name = "rubbishbin"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pillow>=11.3.0",
+    "psutil>=7.2.2",
+    "pyautogui>=0.9.54",
+    "pywin32>=311",
+]
