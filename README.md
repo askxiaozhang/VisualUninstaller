@@ -74,6 +74,24 @@ pip install pywin32 psutil
 python main.py
 ```
 
+### 📦 打包为 EXE
+如果你想直接分发可执行文件给其他人，可以使用 `PyInstaller` 进行打包：
+
+1. **安装打包依赖**：
+   ```bash
+   uv add pyinstaller
+   ```
+
+2. **执行打包命令**：
+   ```bash
+   uv run pyinstaller --onefile --noconsole --uac-admin --name WinXKill main.py
+   ```
+   - `--onefile`: 生成单个独立的 EXE 文件。
+   - `--noconsole`: 运行时不显示黑色命令行窗口。
+   - `--uac-admin`: 自动请求管理员权限（图标上会出现盾牌）。
+
+打包完成后，生成的 `WinXKill.exe` 将位于 `dist/` 文件夹内。
+
 ## 🛠️ 技术栈
 - **GUI**: Tkinter
 - **OS Interaction**: Windows API (win32gui, win32process, win32api)
