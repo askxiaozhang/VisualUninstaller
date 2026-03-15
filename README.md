@@ -18,7 +18,7 @@
 
 ```mermaid
 graph TD
-    A[启动 WinXKill] --> B[点击 "抓取目标窗口"]
+    A[启动 WinXKill] --> B[点击抓取目标窗口]
     B --> C[WinXKill 最小化]
     C --> D[鼠标点击目标软件窗口]
     D --> E[WinXKill 恢复并读取 HWND/PID]
