@@ -8,7 +8,16 @@
   <img src="https://img.shields.io/badge/Platform-Windows-blue?style=for-the-badge&logo=windows" alt="Platform">
   <img src="https://img.shields.io/badge/Python-3.8+-yellow?style=for-the-badge&logo=python" alt="Python">
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
+  <a href="https://xiaozhang2.gumroad.com/l/win-visual-uninstaller"><img src="https://img.shields.io/badge/Get%20it%20on-Gumroad-orange?style=for-the-badge&logo=gumroad" alt="Gumroad"></a>
 </p>
+
+<div align="center">
+  <h3>🚀 Get the Pro version for just $2.90!</h3>
+  <p>Support the development and get the latest pre-compiled, easy-to-use executable.</p>
+  <a href="https://xiaozhang2.gumroad.com/l/win-visual-uninstaller" target="_blank">
+    <img src="https://img.shields.io/badge/TRY%20NOW%20-%20$2.90-blue?style=for-the-badge&logo=gumroad&logoColor=white" alt="Try Now">
+  </a>
+</div>
 
 ---
 
@@ -98,8 +107,12 @@ The generated `WinXKill.exe` will be located in the `dist/` folder.
 - **Registry**: Software info extraction via `winreg`
 - **Process Mgmt**: `psutil`
 
-## 📄 License
-WinXKill is open source software released under the MIT License. See [LICENSE](./LICENSE) for details.
+## 💰 Support & License
+WinXKill is available as a paid Pro version with pre-compiled binaries on [Gumroad](https://xiaozhang2.gumroad.com/l/win-visual-uninstaller) for **$2.90**.
+
+- Your support helps keep this project updated!
+- The source code is also available under the MIT License.
+- For full license details, please see the [LICENSE](./LICENSE) file.
 
 ## ⚠️ Disclaimer
 This tool includes a "Force Delete" feature. Use it with caution and ensure your target is correct. The author is not responsible for any data loss caused by misuse.
