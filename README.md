@@ -107,12 +107,8 @@ The generated `WinXKill.exe` will be located in the `dist/` folder.
 - **Registry**: Software info extraction via `winreg`
 - **Process Mgmt**: `psutil`
 
-## 💰 Support & License
-WinXKill is available as a paid Pro version with pre-compiled binaries on [Gumroad](https://xiaozhang2.gumroad.com/l/win-visual-uninstaller) for **$2.90**.
-
-- Your support helps keep this project updated!
-- The source code is also available under the MIT License.
-- For full license details, please see the [LICENSE](./LICENSE) file.
+## 📄 License
+WinXKill is open source software released under the MIT License. See [LICENSE](./LICENSE) for details.
 
 ## ⚠️ Disclaimer
 This tool includes a "Force Delete" feature. Use it with caution and ensure your target is correct. The author is not responsible for any data loss caused by misuse.
