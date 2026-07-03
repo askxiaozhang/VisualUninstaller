@@ -11,14 +11,6 @@
   <a href="https://xiaozhang2.gumroad.com/l/win-visual-uninstaller"><img src="https://img.shields.io/badge/Get%20it%20on-Gumroad-orange?style=for-the-badge&logo=gumroad" alt="Gumroad"></a>
 </p>
 
-<div align="center">
-  <h3>🚀 Get the Pro version for just $2.90!</h3>
-  <p>Support the development and get the latest pre-compiled, easy-to-use executable.</p>
-  <a href="https://xiaozhang2.gumroad.com/l/win-visual-uninstaller" target="_blank">
-    <img src="https://img.shields.io/badge/TRY%20NOW%20-%20$2.90-blue?style=for-the-badge&logo=gumroad&logoColor=white" alt="Try Now">
-  </a>
-</div>
-
 ---
 
 **WinXKill** is a visual uninstaller for Windows inspired by Linux's `xkill`. Don't like a window? Just "point and click." The tool automatically identifies the program information and launches the official uninstaller or performs a "force delete" for stubborn software.
