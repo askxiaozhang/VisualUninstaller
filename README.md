@@ -7,17 +7,8 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-Windows-blue?style=for-the-badge&logo=windows" alt="Platform">
   <img src="https://img.shields.io/badge/Python-3.8+-yellow?style=for-the-badge&logo=python" alt="Python">
-  <img src="https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge" alt="License">
-  <a href="https://xiaozhang2.gumroad.com/l/win-visual-uninstaller"><img src="https://img.shields.io/badge/Get%20it%20on-Gumroad-orange?style=for-the-badge&logo=gumroad" alt="Gumroad"></a>
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
 </p>
-
-<div align="center">
-  <h3>🚀 Get the Pro version for just $2.90!</h3>
-  <p>Support the development and get the latest pre-compiled, easy-to-use executable.</p>
-  <a href="https://xiaozhang2.gumroad.com/l/win-visual-uninstaller" target="_blank">
-    <img src="https://img.shields.io/badge/BUY%20NOW%20-%20$2.90-blue?style=for-the-badge&logo=gumroad&logoColor=white" alt="Buy Now">
-  </a>
-</div>
 
 ---
 
@@ -42,7 +33,7 @@ graph TD
 
 - **🎯 Crosshair Interaction**: Click the "Pick" button and whatever you click is your target.
 - **🔍 Smart Recognition**: Automatically finds the installation path and registry uninstall commands using the Process ID.
-- **🛡️ Security Guard**: Built-in protection for critical system processes (e.g., `explorer.exe`) to prevent accidental damage.
+- **🛡️ Security Guard**: Built-in protection of critical system processes (e.g., `explorer.exe`) to prevent accidental damage.
 - **⚡ Dual Modes**:
   - **Graceful Mode**: Prioritizes the software's official uninstaller if available.
   - **Force Mode**: For bloatware or leftover files, it terminates the process and physically deletes the directory.
@@ -107,11 +98,8 @@ The generated `WinXKill.exe` will be located in the `dist/` folder.
 - **Registry**: Software info extraction via `winreg`
 - **Process Mgmt**: `psutil`
 
-## 💰 Support & License
-WinXKill is a paid product. You can purchase the officially supported and pre-compiled version on [Gumroad](https://xiaozhang2.gumroad.com/l/win-visual-uninstaller) for **$2.90**.
-
-- Your support helps keep this project updated!
-- For full license details, please see the [LICENSE](./LICENSE) file.
+## 📄 License
+WinXKill is open source software released under the MIT License. See [LICENSE](./LICENSE) for details.
 
 ## ⚠️ Disclaimer
 This tool includes a "Force Delete" feature. Use it with caution and ensure your target is correct. The author is not responsible for any data loss caused by misuse.
